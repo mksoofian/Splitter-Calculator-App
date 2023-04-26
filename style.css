@@ -33,6 +33,10 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+.header_logo {
+  letter-spacing: 0.5rem;
+  color: var(--verydarkCyan);
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -107,7 +111,7 @@ button {
   top: 2.5rem;
   bottom: 0;
   width: 12px;
-  background: url(/icon-dollar.svg) center / contain no-repeat;
+  background: url(./images/icon-dollar.svg) center / contain no-repeat;
 }
 
 .party_area {
@@ -120,7 +124,7 @@ button {
   top: 2.5rem;
   bottom: 0;
   width: 12px;
-  background: url(/icon-person.svg) center / contain no-repeat;
+  background: url(./images/icon-person.svg) center / contain no-repeat;
 }
 .label_wrapper {
   display: flex;
@@ -187,7 +191,7 @@ input,
 
 @media (max-width: 1000px) {
   body {
-    background-color: pink;
+    background-color: var(--lightgreyishCyan);
     margin: 0;
   }
   .container {

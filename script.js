@@ -59,15 +59,16 @@ tipInput.addEventListener("change", () => {
     }
   }
 });
-//Calc button functionallity
+
+/////Calc button functionallity
 // functions to toggle button color upon click
-//and function to change button color back to default if not selected
 function btnColorToggleOn(button) {
   if (button.style.color !== "var(--verydarkCyan)") {
     button.style.color = "var(--verydarkCyan)";
     button.style.backgroundColor = "var(--strongCyan)";
   }
 }
+//and function to change button color back to default if not selected
 function btnColorToggleOff(button) {
   if (button.style.color == "var(--verydarkCyan)") {
     button.style.color = "var(--white)";
@@ -81,10 +82,12 @@ for (i of percBtnsArr) {
       btnNumContent = Number(i.lastElementChild.textContent);
       btnNumToPerc = btnNumContent / 100;
       btnColorToggleOn(i);
+      tip = btnNumToPerc;
+      console.log(tip);
+      //The below resets tip input field
       tipInput.value = "";
       tipInput.style.textAlign = "center";
-      tip = btnNumToPerc;
-      //The Below deselects buttons that aren't active
+      //The below deselects buttons that aren't active
       for (y = 0; y < percBtnsArr.length; y++) {
         if (
           Number(percBtnsArr[y].lastElementChild.textContent) !== btnNumContent
@@ -96,13 +99,14 @@ for (i of percBtnsArr) {
 }
 
 /////Updates results on change
+//function declarations
 function updateTipPerPerson(value) {
   document.querySelector(".result1").textContent = value;
 }
 function updateTotalPerPerson(value) {
   document.querySelector(".result2").textContent = value;
 }
-document.addEventListener("click", () => {
+function updateResults() {
   if (bill > 0 && tip > 0 && partySize > 0) {
     let tipTotal = bill * tip;
     let tipAmount = tipTotal / partySize;
@@ -124,4 +128,11 @@ document.addEventListener("click", () => {
     updateTipPerPerson(tipAmount.toFixed(2));
     updateTotalPerPerson(totalPerPerson.toFixed(2));
   });
+}
+//Listeners
+document.addEventListener("change", () => {
+  updateResults();
+});
+document.addEventListener("click", () => {
+  updateResults();
 });
