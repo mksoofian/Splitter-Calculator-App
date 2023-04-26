@@ -2,6 +2,7 @@
   font-size: 62.5%;
   box-sizing: border-box;
   --strongCyan: hsl(172, 67%, 45%);
+  --activeCyan: hsl(176, 61%, 80%);
   --verydarkCyan: hsl(183, 100%, 15%);
   --darkgrayishCyan: hsl(186, 14%, 43%);
   --grayishCyan: hsl(184, 14%, 56%);
@@ -35,7 +36,7 @@ button {
 }
 .header_logo {
   letter-spacing: 0.5rem;
-  color: var(--grayishCyan);
+  color: var(--verydarkCyan);
   margin-bottom: 5rem;
 }
 .container {
@@ -53,7 +54,7 @@ button {
   padding: 4rem;
   display: flex;
   width: 900px;
-  height: 500px;
+  height: px;
 }
 .calc_area {
   width: 50%;
@@ -78,8 +79,8 @@ button {
   text-align: right;
   padding-right: 1rem;
 }
-#bill_input:focus,
-#tip_input:focus {
+#bill_input:hover,
+#tip_input:hover {
   border: 2px solid var(--strongCyan);
 }
 
@@ -186,6 +187,10 @@ input,
   color: var(--verydarkCyan);
   padding: 0.75rem;
   border-radius: 0.5rem;
+  font-size: 1.8rem;
+}
+#reset_btn:hover {
+  background-color: var(--activeCyan);
 }
 
 @media (max-width: 1000px) {

@@ -65,13 +65,13 @@ tipInput.addEventListener("change", () => {
 function btnColorToggleOn(button) {
   if (button.style.color !== "var(--verydarkCyan)") {
     button.style.color = "var(--verydarkCyan)";
-    button.style.backgroundColor = "var(--strongCyan)";
+    button.style.backgroundColor = "var(--activeCyan)";
   }
 }
 //and function to change button color back to default if not selected
 function btnColorToggleOff(button) {
   if (button.style.color == "var(--verydarkCyan)") {
-    button.style.color = "var(--white)";
+    button.style.color = "var(--verylightgrayishCyan)";
     button.style.backgroundColor = "var(--verydarkCyan)";
   }
 }
