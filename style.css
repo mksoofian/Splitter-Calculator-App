@@ -35,7 +35,8 @@ button {
 }
 .header_logo {
   letter-spacing: 0.5rem;
-  color: var(--verydarkCyan);
+  color: var(--grayishCyan);
+  margin-bottom: 5rem;
 }
 .container {
   display: flex;
@@ -52,7 +53,7 @@ button {
   padding: 4rem;
   display: flex;
   width: 900px;
-  height: 450px;
+  height: 500px;
 }
 .calc_area {
   width: 50%;
@@ -151,10 +152,7 @@ input,
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
-/* .active_btn {
-  color: var(--verydarkCyan);
-  background-color: var(--strongCyan);
-} */
+
 .results_card {
   width: 50%;
   background-color: var(--verydarkCyan);
@@ -170,12 +168,13 @@ input,
   justify-content: space-between;
   align-items: center;
 }
+.tip_results {
+  font-size: 1.6rem;
+  color: var(--verylightgrayishCyan);
+}
 .totals .perPerson {
   color: var(--grayishCyan);
-  font-size: 1rem;
-}
-.results_card label {
-  color: var(--verylightgrayishCyan);
+  font-size: 1.2rem;
 }
 .results {
   color: var(--strongCyan);
@@ -222,7 +221,8 @@ input,
   .results_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
   .results {
     font-size: 3.2rem;
