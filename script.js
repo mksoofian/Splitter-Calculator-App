@@ -23,8 +23,9 @@ let partySize;
 
 /////Functions
 
-billRecieved.addEventListener("change", () => {
+billRecieved.addEventListener("input", () => {
   bill = Number(billRecieved.value);
+  updateAll();
   //Error Message if billRecieved.value == 0
   if (billRecieved.value <= 0) {
     billRecieved.value = "0";
@@ -36,8 +37,9 @@ billRecieved.addEventListener("change", () => {
   }
 });
 
-numOfPeople.addEventListener("change", () => {
+numOfPeople.addEventListener("input", () => {
   partySize = Number(numOfPeople.value);
+  updateAll();
   //Error Message if NumofPeople == 0
   if (partySize <= 0) {
     numOfPeople.value = "0";
@@ -49,12 +51,18 @@ numOfPeople.addEventListener("change", () => {
   }
 });
 //Updates text-align right in Tip Input when active
-tipInput.addEventListener("change", () => {
+//Updates tip value and converts to %
+tipInput.addEventListener("input", () => {
+  //Text Alignment of Placeholder and Input
   if (tipInput.value !== "") {
     tipInput.style.textAlign = "right";
   } else {
     tipInput.style.textAlign = "center";
   }
+  //Updates tip value and converts to %
+  numToPerc = tipInput.value / 100;
+  tip = numToPerc;
+  updateAll();
 });
 
 /////Calc button functionallity
@@ -80,7 +88,6 @@ for (i of percBtnsArr) {
       btnNumToPerc = btnNumContent / 100;
       btnColorToggleOn(i);
       tip = btnNumToPerc;
-      console.log(tip);
       //The below resets tip input field
       tipInput.value = "";
       tipInput.style.textAlign = "center";
@@ -91,6 +98,7 @@ for (i of percBtnsArr) {
         )
           btnColorToggleOff(percBtnsArr[y]);
       }
+      updateAll();
     });
   })(i);
 }

@@ -80,10 +80,14 @@ button {
   text-align: right;
   padding-right: 1rem;
 }
-#bill_input:hover,
-#tip_input:hover,
-#party_count:hover {
+.input-box {
+  cursor: pointer;
+  font-family: inherit;
+}
+.input-box:focus {
+  outline: none;
   border: 2px solid var(--strongCyan);
+  border-radius: 5px;
 }
 
 #tip_input {
