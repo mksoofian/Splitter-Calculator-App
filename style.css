@@ -193,6 +193,9 @@ input,
     background-color: var(--lightgreyishCyan);
     margin: 0;
   }
+  .header_logo {
+    margin-bottom: initial;
+  }
   .container {
     position: initial;
     transform: translate(0);
