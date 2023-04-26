@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SPLI<br />TTER</h1>
+      <div class="main_card">
+        <section class="calc_area">
+          <div class="bill_area">
+            <label class="labels" for="bill_input">BILL</label>
+            <div class="dollar_icon"></div>
+            <input
+              id="bill_input"
+              type="number"
+              value=""
+              min="0"
+              placeholder="0"
+            />
+          </div>
+          <div class="tip_area">
+            <label class="labels" for="tip_selectors">Select Tip %</label>
+            <div id="tip_selectors" class="calc_buttons">
+              <button class="percBtn">
+                <span class="percVal" id="five">5</span>%
+              </button>
+              <button class="percBtn">
+                <span class="percVal" id="ten">10</span>%
+              </button>
+              <button class="percBtn">
+                <span class="percVal" id="fifteen">15</span>%
+              </button>
+              <button class="percBtn">
+                <span class="percVal" id="twentyfive">25</span>%
+              </button>
+              <button class="percBtn">
+                <span class="percVal" id="fifty">50</span>%
+              </button>
+              <input
+                id="tip_input"
+                type="number"
+                value=""
+                placeholder="Custom"
+                min="0"
+              />
+            </div>
+          </div>
+          <div class="party_area">
+            <div class="label_wrapper">
+              <label class="labels" for="party_count">Number of People</label>
+              <div class="error_msg"></div>
+            </div>
+            <div class="people_icon"></div>
+            <input
+              id="party_count"
+              type="number"
+              value=""
+              min="0"
+              placeholder="0"
+            />
+          </div>
+        </section>
+
+        <section class="results_card">
+          <div class="results_wrapper">
+            <div class="totals">
+              <label for="tip_results"
+                >Tip Amount <br /><span class="perPerson"
+                  >/ per person</span
+                ></label
+              >
+              <div class="results">$ <span class="result1"> 0.00</span></div>
+            </div>
+            <div class="totals">
+              <label for="tip_results"
+                >Total <br /><span class="perPerson">/ per person</span></label
+              >
+              <div class="results">$ <span class="result2"> 0.00</span></div>
+            </div>
+          </div>
+          <button id="reset_btn">RESET</button>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
