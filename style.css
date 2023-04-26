@@ -54,7 +54,7 @@ button {
   padding: 4rem;
   display: flex;
   width: 900px;
-  height: px;
+  height: 475px;
 }
 .calc_area {
   width: 50%;
@@ -81,7 +81,8 @@ button {
   padding-right: 1rem;
 }
 #bill_input:hover,
-#tip_input:hover {
+#tip_input:hover,
+#party_count:hover {
   border: 2px solid var(--strongCyan);
 }
 

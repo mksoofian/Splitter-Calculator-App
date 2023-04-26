@@ -105,7 +105,7 @@ function updateTotalPerPerson(value) {
 }
 function updateAll() {
   //Activate reset button
-  if (billRecieved > 0 || tipInput > 0 || numOfPeople > 0) {
+  if (billRecieved.value > 0 || tipInput.value > 0 || numOfPeople.value > 0) {
     resetBtn.style.color = "var(--verydarkCyan)";
     resetBtn.style.backgroundColor = "var(--strongCyan)";
     resetBtn.disabled = false;
@@ -131,7 +131,7 @@ function updateAll() {
     updateTotalPerPerson(totalPerPerson.toFixed(2));
   }
   //Reset Function
-  const reset = resetBtn.addEventListener("click", () => {
+  resetBtn.addEventListener("click", () => {
     billRecieved.value = "";
     bill = 0;
     tip = "";
@@ -145,7 +145,6 @@ function updateAll() {
     updateTipPerPerson(tipAmount.toFixed(2));
     updateTotalPerPerson(totalPerPerson.toFixed(2));
   });
-  reset();
 }
 //Listeners
 document.addEventListener("change", () => {
