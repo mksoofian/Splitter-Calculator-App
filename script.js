@@ -53,6 +53,8 @@ numOfPeople.addEventListener("input", () => {
 //Updates text-align right in Tip Input when active
 //Updates tip value and converts to %
 tipInput.addEventListener("input", () => {
+  //Deselect other buttons
+  btnColorToggleOffAll();
   //Text Alignment of Placeholder and Input
   if (tipInput.value !== "") {
     tipInput.style.textAlign = "right";
@@ -80,6 +82,14 @@ function btnColorToggleOff(button) {
     button.style.backgroundColor = "var(--verydarkCyan)";
   }
 }
+//Toggle off button color for all calc buttons
+const btnColorToggleOffAll = () => {
+  for (let b = 0; b < percBtnsArr.length; b++) {
+    if (Number(percBtnsArr[b].lastElementChild.textContent) !== tipInput.value)
+      btnColorToggleOff(percBtnsArr[b]);
+  }
+};
+
 //Function that updates the tip value to reflect button clicked as a %
 for (i of percBtnsArr) {
   (function (i) {
