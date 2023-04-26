@@ -63,6 +63,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  gap: 3rem;
 }
 .labels {
   margin-bottom: 0.75rem;
@@ -182,15 +183,15 @@ input,
   font-size: 4.2rem;
 }
 #reset_btn {
+  /* color: hsla(182, 43%, 30%, 0.644); */
   width: 100%;
-  background-color: var(--strongCyan);
-  color: var(--verydarkCyan);
   padding: 0.75rem;
   border-radius: 0.5rem;
   font-size: 1.8rem;
 }
-#reset_btn:hover {
-  background-color: var(--activeCyan);
+#reset_btn:disabled {
+  background-color: hsla(182, 43%, 30%, 0.644);
+  color: var(--verydarkCyan);
 }
 
 @media (max-width: 1000px) {
@@ -199,7 +200,7 @@ input,
     margin: 0;
   }
   .header_logo {
-    margin-bottom: initial;
+    margin-bottom: 1.5rem;
   }
   .container {
     position: initial;
@@ -216,7 +217,6 @@ input,
   .calc_area {
     width: 100%;
     margin-bottom: 2rem;
-    gap: 3rem;
   }
   input,
   .calc_area button {

@@ -28,7 +28,10 @@
       <main class="main_card">
         <section class="calc_area">
           <div class="bill_area">
-            <label class="labels" for="bill_input">Bill</label>
+            <div class="label_wrapper">
+              <label class="labels" for="bill_input">Bill</label>
+              <div class="error_msg billInputError"></div>
+            </div>
             <div class="dollar_icon"></div>
             <input
               id="bill_input"
@@ -68,7 +71,7 @@
           <div class="party_area">
             <div class="label_wrapper">
               <label class="labels" for="party_count">Number of People</label>
-              <div class="error_msg"></div>
+              <div class="error_msg peopleInputError"></div>
             </div>
             <div class="people_icon"></div>
             <input
@@ -96,7 +99,7 @@
               <div class="results">$ <span class="result2"> 0.00</span></div>
             </div>
           </div>
-          <button id="reset_btn">RESET</button>
+          <button id="reset_btn" disabled>RESET</button>
         </section>
       </main>
     </div>
